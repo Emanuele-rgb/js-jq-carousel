@@ -9,11 +9,31 @@ var img2 = $('.img2')
 var img3 = $('.img3')
 
 next.click(function() {
-  $(img2).addClass('active');
-  $(img1).removeClass('active');
+  if (img1.hasClass('active')){
+    $(img2).addClass('active');
+    $(img1).removeClass('active');
+
+  } else if (img2.hasClass('active')) {
+    $(img3).addClass('active');
+    $(img2).removeClass('active');
+
+  } else {
+    $(img1).addClass('active');
+    $(img3).removeClass('active');
+  }
 });
 
 previous.click(function() {
-  $(img1).addClass('active');
-  $(img2).removeClass('active');
+  if (img1.hasClass('active')){
+    $(img3).addClass('active');
+    $(img1).removeClass('active');
+
+  } else if (img2.hasClass('active')) {
+    $(img1).addClass('active');
+    $(img2).removeClass('active');
+
+  } else {
+    $(img2).addClass('active');
+    $(img3).removeClass('active');
+  }
 });

@@ -33,13 +33,13 @@
 .button-left {
   line-height: 100px;
   height: 100px;
-
+  cursor: pointer;
 }
 
 .button-right {
   line-height: 100px;
   height: 100px;
-
+  cursor: pointer;
 }
 
 i {
