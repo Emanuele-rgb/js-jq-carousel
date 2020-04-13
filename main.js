@@ -34,6 +34,38 @@ previous.click(function() {
 
   } else {
     $(img2).addClass('active');
+    $(img3 ).removeClass('active');
+  }
+});
+
+
+$(document).keydown(function(Key) {
+  if (Key.keyCode == 39)  {
+    if (img1.hasClass('active')){
+    $(img2).addClass('active');
+    $(img1).removeClass('active');
+
+  } else if (img2.hasClass('active')) {
+    $(img3).addClass('active');
+    $(img2).removeClass('active');
+
+  } else {
+    $(img1).addClass('active');
     $(img3).removeClass('active');
   }
+} else if (Key.keyCode == 37){
+  if (img1.hasClass('active')){
+    $(img3).addClass('active');
+    $(img1).removeClass('active');
+
+  } else if (img2.hasClass('active')) {
+    $(img1).addClass('active');
+    $(img2).removeClass('active');
+
+  } else {
+    $(img2).addClass('active');
+    $(img3 ).removeClass('active');
+  }
+}
+
 });
